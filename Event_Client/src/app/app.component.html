@@ -1,0 +1,95 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid custem">
+        <div class="brands">
+        
+          <a  style="text-decoration: none; color:black; font-size:25px;font-weight:900px; margin-left:130px;" routerLink="/home">Event Management</a>
+
+        </div>
+
+        <div class="links">
+          <ng-container *ngIf="token">
+            <ul style="display:flex;">
+              <i  style=" margin-right:10px; font-size: 20px;" class="bi bi-person-fill"></i>
+              <li style="margin-right:100px;" routerLink="/home">{{data.user.name}}</li>
+
+             
+              
+          
+              <li class="me-5 act" routerLink="/home">Home</li>
+              <li class="me-5 bo" routerLink="/profile">Events</li>
+              <li class="me-5 bo"routerLink="/add-events">AddEvents</li>
+              <li class="me-5 bo" routerLink="/trash">Trash</li>
+              <li class="me-5 bo" (click)="logout()">Logout</li>
+            </ul>
+
+          </ng-container>
+          <ng-container *ngIf="!token">
+            <ul style="display:flex;">
+             
+              <li class="me-5 bo" routerLink="/signin">Signin</li>
+              <li class="me-5 bo" routerLink="/signup">Signup</li>
+            </ul>
+
+          </ng-container>
+         
+
+        </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">{{data.data.name}}</a>
+    <a style="margin-left:100px" class="navbar-brand " href="#">EventMng</a>
+
+
+   
+
+      <ng-container *ngif="!data.data">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" routerLink="signup">Signup</a>
+          </li>
+
+          <li class="nav-item ms-3">
+            <a class="nav-link active" aria-current="page" routerLink="/signin">Signin</a>
+          </li>
+
+        </ul>
+
+      </ng-container>
+
+      <ng-container *ngif="data.data">
+        <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" routerLink="signup">Signup</a>
+          </li>
+
+          <li class="nav-item ms-3">
+            <a class="nav-link active" aria-current="page" routerLink="/signin">Signin</a>
+          </li>
+
+        </ul>
+
+      </ng-container>
+
+
+    
+  </div>
+</nav> -->
+
+
+<router-outlet></router-outlet>

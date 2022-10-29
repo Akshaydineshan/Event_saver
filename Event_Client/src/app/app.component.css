@@ -1,0 +1,21 @@
+ul li{
+    list-style: none;
+}
+nav{
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    align-items: center;
+}
+.links ul .act,.links ul li.bo:focus{
+    background-color: rgb(197, 92, 169);
+    border-radius: 5px;
+    padding:5px;
+    color:white;
+}
+/* .links ul li{
+    background-color: rgb(194, 83, 171);
+    border-radius: 5px;
+    padding:4px;
+    color:white;
+} */

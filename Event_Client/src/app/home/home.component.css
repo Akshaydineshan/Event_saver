@@ -1,0 +1,31 @@
+.hero-img{
+    background-image: linear-gradient(rgba(17, 11, 11, 0.733), rgba(26, 23, 23, 0.826)), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+
+    /* Set a specific height */
+    height: 65vh;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-img button{
+  width:140px;
+  height: 45px;
+  background-color: rgb(0, 94, 255);
+color:white;
+font-size: 12px;
+transition: 0.1s ease-in-out;
+border-radius: 7px;
+}
+
+.hero-img button:hover{
+    width:155px;
+    height: 50px;
+    font-size: 15px;
+
+}

@@ -1,0 +1,23 @@
+.f{
+    font-size: 65px;
+}
+.s{
+    font-size: 55px;
+}
+.t{
+    font-size: 45px;
+}
+.for{
+    font-size: 35px;
+}
+.fi{
+    font-size: 25px;
+}
+.sign{
+    margin-top:80px;
+}
+label{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

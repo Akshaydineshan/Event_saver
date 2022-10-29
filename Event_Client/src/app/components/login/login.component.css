@@ -1,0 +1,18 @@
+
+.signin-main-page{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+form{
+    border: 1px solid #8e8e8e;
+    border-radius: 7px;
+    padding:80px 70px;
+}
+.reg-btn{
+    display:flex;
+    justify-content: center;
+}
+.form-control{
+    width:280px;
+}

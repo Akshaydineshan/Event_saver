@@ -1,0 +1,52 @@
+
+
+
+<div class="container-fluid" *ngIf="trashEvents==''">
+    <div class="row text-center mt-4">
+        <div class="sign">
+           
+            <div >
+              <i class="bi bi-star f "></i>
+              <i class="bi bi-star s"></i>
+              <i class="bi bi-star t"></i>
+              <i class="bi bi-star for"></i>
+              <i class="bi bi-star fi"></i>
+            </div>
+            <label class="mt-1" for="">Empty Trash......</label>
+
+        </div>
+   
+     
+    </div>
+  
+  </div>
+
+
+
+
+<table class="table mt-5" *ngIf="trashEvents!=''">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Event</th>
+        <th scope="col">Description</th>
+        <th scope="col">StartDate</th>
+        <th scope="col">EndDate</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of trashEvents">
+        <th scope="row">1</th>
+        <td>{{event.eventname}}</td>
+        <td>{{event.eventdescription}}</td>
+        <td>{{event.startdate}}</td>
+        <td>{{event.enddate}}</td>
+        <td>{{event.eventtype}}</td>
+       
+        <td><button class="btn btn-outline-warning" (click)="deleteTrash(event._id)">Delete</button></td>
+      </tr>
+ 
+    </tbody>
+  </table>

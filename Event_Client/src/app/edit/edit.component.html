@@ -1,0 +1,33 @@
+
+<div class="addevents-main d-flex">
+    <form [formGroup]="EditEvent" (ngSubmit)="editEvent()">
+        <div class="addevents-head">
+           <h4 class="text-center">Add Events</h4>
+        </div>
+        <!-- <div class="addevents-items mt-3">
+            <input type="text" name="" id=""  class="form-control" [value]="data.user._id"  formControlName="user">
+        </div> -->
+
+        <div class="addevents-items mt-3">
+            <input type="text" name="" id=""  class="form-control" placeholder="Event name" formControlName="eventname">
+        </div>
+        <div class="addevents-items mt-3">
+            <input type="text" name="" id=""  class="form-control" placeholder="Event description" formControlName="eventdescription">
+        </div>
+        <div class="addevents-items mt-3">
+           start <input type="date" name="" id=""  class="form-control"  formControlName="startdate">
+        </div>
+        <div class="addevents-items mt-3">
+            end<input type="date" name="" id=""  class="form-control"  formControlName="enddate">
+        </div>
+        <div class="addevents-items mt-3">
+            <span class="ms-2">Event type</span>
+            <span class="ms-3">offitial</span> <span class="ms-1" >  <input type="radio" name="type" id="" value="offitial" formControlName="eventtype"></span >
+            <span class="ms-3">Personal</span> <span class="ms-1">  <input type="radio" name="type" value="personal" id=""formControlName="eventtype" ></span>
+         </div>
+
+        <div class="add-event-btn">
+            <button class="btn btn-outline-success" type="submit">Add</button>
+        </div>
+    </form>
+</div>
