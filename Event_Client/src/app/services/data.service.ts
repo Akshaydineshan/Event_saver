@@ -41,11 +41,15 @@ export class DataService {
         console.log("inside if");
 
         const data: any = await this.rest.get("http://localhost:3000/api/account/profile")
+        
+         if(data){
+          this.user = data['user']
+          this.isUserVerified.next(true)
+          console.log(this.user);
+  
 
-        this.user = data['user']
-        this.isUserVerified.next(true)
-        console.log(this.user);
-
+         }
+       
 
 
       }

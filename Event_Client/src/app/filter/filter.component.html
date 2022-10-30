@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row bg-secondary">
+        <div class="roww">
+            <div class="filter ">
+                <span class="me-5">Event Types:</span>
+                <span class="ms-4">{{'All Events ('+All+')' }}</span>
+                <span  class="ms-1"><input type="radio" name="eventtype" id="" value="All" [(ngModel)]="selectradio" (change)="checkradio()"></span>
+                <span class="ms-4">{{'Offitial Events('+Offitial+')'}}</span>
+                <span  class="ms-1"><input type="radio" name="eventtype" id="" value="offitial"  [(ngModel)]="selectradio"(change)="checkradio()"></span>
+                <span  class="ms-4">{{'Personal Events('+Personal+')'}}</span>
+                <span  class="ms-1"><input type="radio" name="eventtype" id="" value="personal"  [(ngModel)]="selectradio" (change)="checkradio()"></span>
+            </div>
+
+        </div>
+      
+    </div>
+</div>

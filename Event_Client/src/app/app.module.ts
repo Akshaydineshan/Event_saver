@@ -12,7 +12,8 @@ import { MessageComponent } from './components/message/message.component';
 import { AddEventsComponent } from './components/add-events/add-events.component';
 import { TrashComponent } from './trash/trash.component';
 import { HomeComponent } from './home/home.component';
-import { EditComponent } from './edit/edit.component'
+import { EditComponent } from './edit/edit.component';
+import { FilterComponent } from './filter/filter.component'
 
 
 
@@ -28,6 +29,7 @@ import { EditComponent } from './edit/edit.component'
     TrashComponent,
     HomeComponent,
     EditComponent,
+    FilterComponent,
    ],
   imports: [
     BrowserModule,

@@ -37,8 +37,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let event of trashEvents">
-        <th scope="row">1</th>
+      <tr *ngFor="let event of trashEvents;let i=index;">
+        <th scope="row">{{i+1}}</th>
         <td>{{event.eventname}}</td>
         <td>{{event.eventdescription}}</td>
         <td>{{event.startdate}}</td>

@@ -1,11 +1,8 @@
-
-
-
 <div class="container-fluid" *ngIf="events==''">
   <div class="row text-center mt-4">
     <div class="sign">
-           
-      <div >
+
+      <div>
         <i class="bi bi-star f "></i>
         <i class="bi bi-star s"></i>
         <i class="bi bi-star t"></i>
@@ -14,39 +11,56 @@
       </div>
       <label class="mt-1" for="">No Events Added......</label>
 
-  </div>
+    </div>
   </div>
 
 </div>
 
 
 
-<table class="table mt-5" *ngIf="events!=''">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Event</th>
-        <th scope="col">Description</th>
-        <th scope="col">StartDate</th>
-        <th scope="col">EndDate</th>
-        <th scope="col">Priority</th>
-        <th scope="col">Operation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let event of events;let i=index">
-        <th scope="row">{{i+1}}</th>
-        <td>{{event.eventname}}</td>
-        <td>{{event.eventdescription}}</td>
-        <td>{{event.startdate}}</td>
-        <td>{{event.enddate}}</td>
-        <td>{{event.eventtype}}</td>
-       
-        <td>
-          <button class="btn btn-outline-danger" (click)="delete(event._id)">Delete</button>
-          <button class="btn btn-outline-info ms-2" routerLink="/edit/{{event._id}}" (click)="editValue(event)">edit</button>
-        </td>
-      </tr>
- 
-    </tbody>
-  </table>
+
+<div class="container mt-4 " *ngIf="events!=''">
+  <div class="row">
+    <app-filter (filterEvent)="checkedradio($event)"  [All]="countAll()" [Offitial]="countOffitial()"
+    [Personal]="countPersonal()"></app-filter>
+  </div>
+
+  <div class="row">
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">S/no</th>
+          <th scope="col">Event</th>
+          <th scope="col">Description</th>
+          <th scope="col">StartDate</th>
+          <th scope="col">EndDate</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let event of events;let i=index">
+          <tr *ngIf="filterValue=='All' || filterValue== event.eventtype" >
+            <th scope="row">{{i+1}}</th>
+            <td>{{event.eventname}}</td>
+            <td>{{event.eventdescription}}</td>
+            <td>{{event.startdate}}</td>
+            <td>{{event.enddate}}</td>
+            <td>{{event.eventtype}}</td>
+            <td>
+              <button class="btn btn-outline-danger" (click)="delete(event._id)">Delete</button>
+              <button class="btn btn-outline-info ms-2" routerLink="/edit/{{event._id}}"
+                (click)="editValue(event)">edit</button>
+            </td>
+          </tr>
+
+        </ng-container>
+      
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+</div>
