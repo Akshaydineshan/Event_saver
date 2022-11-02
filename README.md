@@ -17,7 +17,7 @@ which provides a platform for Add event,view events,delete events,edit events
 
 **2)User login** – Registered user can login
 
-**3)Available** Event will be listing in table format. User can filter out the results based on events type business or personal. 
+**3)Available** -Event will be listing in table format. User can filter out the results based on events type business or personal. 
 
 
 
