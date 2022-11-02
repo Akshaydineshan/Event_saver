@@ -1,5 +1,5 @@
 
-**This is an Evets Saving application for a EventSaver web app developed using MongoDB, Express.js, Angular.js and Node.js (MEAN Stack).
+**This is an Events Saving web app developed using MongoDB, Express.js, Angular.js and Node.js (MEAN Stack).
 Title: Event_Saver**
 
 Project in action
